@@ -25,6 +25,23 @@ function generatePassword(){
   var numbersInput = confirm("Click OK to confirm including numeric characters.");
   var lowerCaseInput = confirm("Click OK to confirm including lowercase characters.");
   var upperCaseInput = confirm("Click ok to confirm including uppercase characters.");
+
+  // Defines the passwordChars variable as a and adds the object keys based on if the confirm was true or false
+  var passwordChars = "";
+  if (specialInput){
+    passwordChars += passwordOptions.special;
+  } 
+  if (numbersInput){
+    passwordChars += passwordOptions.numbers;
+  } 
+  if (lowerCaseInput){
+    passwordChars += passwordOptions.lowerCase;
+  } 
+  if (upperCaseInput){
+    passwordChars += passwordOptions.upperCase;
+  }
+  
+  
 }
 
 // Add event listener to generate button
