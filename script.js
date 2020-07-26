@@ -1,7 +1,7 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
 
-// Added an object for the password values
+// Defines an object for the password values
 var passwordOptions = {
   special: "!\"#$%&'()*+,-./:;<=>?@[\]^_`{|}~",
   numbers: "0123456789",
@@ -26,8 +26,11 @@ function generatePassword(){
   var lowerCaseInput = confirm("Click OK to confirm including lowercase characters.");
   var upperCaseInput = confirm("Click ok to confirm including uppercase characters.");
 
-  // Defines the passwordChars variable as a and adds the object keys based on if the confirm was true or false
+  // Defines the variables as a string
   var passwordChars = "";
+  var finalPassword = "";
+
+  // Determines what characters are available to choose from in the password
   if (specialInput){
     passwordChars += passwordOptions.special;
   } 
@@ -41,7 +44,15 @@ function generatePassword(){
     passwordChars += passwordOptions.upperCase;
   }
   
-  
+  // Loops number of times equal to the input amount
+  for (i = 0; i < parseInt(lengthInput); i++){
+
+    // Appends a random character from the available choices to the end of the previous loop
+    finalPassword += passwordChars.charAt(Math.floor(Math.random() * passwordChars.length));
+  }
+
+  // Prints the outcome of the loop in the password text area
+  return finalPassword;
 }
 
 // Add event listener to generate button
