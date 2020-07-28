@@ -10,4 +10,4 @@ Another challenge I faced was accounting for user error, which includes things l
 
 ## Links and Screenshots
 Here is a link to the complete working generator: https://calebparris.github.io/Password-Generator/ <br/>
-Here is a screenshot of the generator with a random password: <br/> ![Working Password Generator](https://github.com/CalebParris/Passwor-Generator/blob/master/assets/images/Password-Generator.png)
+Here is a screenshot of the generator with a random password: <br/> ![Working Password Generator](https://github.com/CalebParris/Password-Generator/blob/master/assets/images/Password-Generator.png)
